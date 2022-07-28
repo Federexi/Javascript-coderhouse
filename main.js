@@ -1,18 +1,11 @@
-let repeticion = true
-
-while(repeticion){
-    let numeroPersonas = parseInt(prompt("Ingrese la cantidad de personas"))
+function pago(){
+    let personas = parseInt(prompt("Ingrese la cantidad de personas"))
     let total = parseFloat(prompt("Ingrese el total"))
-    iva = parseFloat(prompt("Ingrese el IVA"))
+    let iva = parseFloat(prompt("Ingrese el iva"))
 
-    resultadoSinIva = total / numeroPersonas
-    resultadoConIva = (iva/100) * resultadoSinIva 
-    resultadoFinal = resultadoSinIva + resultadoConIva   
-    alert(`Cada uno debe pagar $${resultadoFinal}`) 
-
-    let confirmar = prompt("¿Desea realizar otra división de cuenta?").toLowerCase()
-
-    if(confirmar == "no" || confirmar == "No" || confirmar == "NO" ){
-        repeticion = false
-    }
+    resultadoSinIva = total / personas
+    resultadoConIva = (iva/100) * resultadoSinIva
+    resultadoFinal = resultadoSinIva + resultadoConIva
+    alert(`Cada uno debe pagar $${resultadoFinal}`)
+    return resultadoFinal
 }
