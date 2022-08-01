@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Divisor</title>
 </head>
 <body>
     <h1>Divisor de cuenta</h1>
-    <button onclick="pago()">Divida su cuenta</button>
+    <p>Ingrese el nombre y monto de cada persona</p>
+    <label>Nombre</label>
+    <br>
+    <input type="text" id="nombre">
+    <br>
+    <label>Monto</label>
+    <br>
+    <input type="number" id="monto"> 
+    <br>
+    <button id="calcular">Ingresar</button>
+    <p>Total: <span id="total"></span> </p>
+    <p id="personitas"></p>
+    <p> Cada uno le toca aportar: <span id="aporte"></span> </p>
     <script src="main.js"></script>
 </body>
 </html>
