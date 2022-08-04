@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Uchen&display=swap');
+
+* {
+    margin: 0;
+    font-weight: 600;
+}
+
+body {
+    font-family: "uchen";
+    background-color: #002B5B;
+}
+
+.card-container {
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-left: 50px;
+    background-color: #256D85;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+input {
+    border: none;
+    background-color: #256D85;
+    border-bottom: 1px solid #002B5B;
+    margin-left: 50px;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* elimina las flechas del input tipo número*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+#monto-texto {
+    margin-left: 110px;
+}
+
+#nombre-texto {
+    margin-left: 107px;
+}
+
+#calcular {
+    margin-left: 97px;
+    margin-top: 10px;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgb(45, 54, 136);
+    box-shadow: 2px 1px 1px 1px  rgb(24, 23, 23);
+}
+
+#calcular:hover {
+    cursor: pointer;
+    background-color: rgb(53, 63, 156);
+    transition-delay: 0.08s;
+}
