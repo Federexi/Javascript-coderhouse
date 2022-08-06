@@ -1,10 +1,10 @@
 const personas = []
 
-var nombreHTMLelemento = document.getElementById("nombre")
-var montoHTMLelemento = document.getElementById("monto")
-var totalHTMLelemento = document.getElementById("total")
-var listaPersonasHTMLelemento = document.getElementById("personitas")
-var aporteHTMLelemento = document.getElementById("aporte")
+let nombreHTMLelemento = document.getElementById("nombre")
+let montoHTMLelemento = document.getElementById("monto")
+let totalHTMLelemento = document.getElementById("total")
+let listaPersonasHTMLelemento = document.getElementById("personitas")
+let aporteHTMLelemento = document.getElementById("aporte")
 
 document.getElementById("calcular").addEventListener("click", ingresarPersona)
 
@@ -15,7 +15,7 @@ function ingresarPersona(){
 
     personas.push({
         nombre:persona,
-        monto:parseFloat(monto),
+        monto: parseInt(monto),
     });
 
     nombreHTMLelemento.value = "";
@@ -24,8 +24,6 @@ function ingresarPersona(){
     definirTotal();
 }
 function definirTotal(){
-
-    listaPersonasHTMLelemento = "";
 
     let lista = "";
     let total = 0;
