@@ -21,6 +21,10 @@ function ingresarPersona(){
     nombreHTMLelemento.value = "";
     montoHTMLelemento.value = "";
 
+    localStorage.setItem("personas", JSON.stringify(personas));
+    local = JSON.parse(localStorage.getItem("personas"));
+    console.log(local);
+
     definirTotal();
 }
 function definirTotal(){
