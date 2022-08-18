@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="main.css">
     <title>Divisor</title>
 </head>
@@ -13,11 +14,11 @@
     <p>Ingrese el nombre y monto de cada persona (iva 21% ya incluido):</p>
     <label id="nombre-texto">Nombre</label>
     <br>
-    <input type="text" id="nombre">
+    <input type="text" id="nombre" required>
     <br>
     <label id="monto-texto">Monto</label>
     <br>
-    <input type="number" id="monto"> 
+    <input type="number" id="monto" required> 
     <br>
     <button id="calcular">Ingresar</button>
     <p>Total: <span id="total"></span> </p>
@@ -25,6 +26,7 @@
     </div>
     <p> Cada uno le toca aportar: <span id="aporte"></span> </p>
  </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="main.js"></script>
 </body>
 </html>
