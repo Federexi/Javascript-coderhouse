@@ -13,6 +13,37 @@ function ingresarPersona(){
     let persona = nombreHTMLelemento.value;
     let monto = montoHTMLelemento.value;
 
+
+    if (persona == "") {
+        Toastify({
+            text: "No ingreso un nombre",
+            duration: 1500,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#302b63",
+            },      
+        }).showToast();
+        return false
+    }
+
+    if (isNaN(parseFloat(monto))){
+        Toastify({
+            text: "No ingreso un monto",
+            duration: 1500,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#302b63",
+            },      
+        }).showToast();
+        return false 
+    }
+
     personas.push({
         nombre:persona,
         monto: parseInt(monto),
@@ -46,7 +77,7 @@ function definirTotal(){
 
     for(let i = 0; i < personas.length; i++){
         total += personas[i].monto
-        lista += `${personas[i].nombre}: ${personas[i].monto} <br>`;
+        lista += `${personas[i].nombre}: ${personas[i].monto} <br>`;  
     }
 
     let iva = 1.21
