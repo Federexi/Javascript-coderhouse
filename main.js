@@ -56,6 +56,17 @@ function ingresarPersona(){
     local = JSON.parse(localStorage.getItem("personas"));
     console.log(local);
 
+    if(personas.length > 0){
+        console.log(...personas)
+    } /*Spread de personas*/
+
+    
+    if(personas.length > 0){
+            personas.map((item) => {
+                console.log(item.nombre)
+            })
+    } /*Mapeo cada nombre de cada persona ingresada ya que no pude realizar una destructuración para mostrar los nombres al ser un array vacío*/
+
     Toastify({
         text: "Ingresado correctamente",
         duration: 1500,
