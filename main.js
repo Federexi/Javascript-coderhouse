@@ -1,5 +1,9 @@
 const personas = []
+const api_key = "28ec1e308f07093e6d9e7ec22501fc72"
+const lat = -34.6000000
+const long = -58.4500000
 
+let clima = document.getElementById("clima")
 let nombreHTMLelemento = document.getElementById("nombre")
 let montoHTMLelemento = document.getElementById("monto")
 let totalHTMLelemento = document.getElementById("total")
@@ -7,6 +11,13 @@ let listaPersonasHTMLelemento = document.getElementById("personitas")
 let aporteHTMLelemento = document.getElementById("aporte")
 
 document.getElementById("calcular").addEventListener("click", ingresarPersona)
+
+//API de temperatura de Buenos Aires
+fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key}&units=metric`)
+.then(response => response.json())
+.then(({main}) => {
+    clima.innerHTML = `<p>${main.temp}°C</p>`
+})
 
 function ingresarPersona(){
 
