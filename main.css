@@ -52,7 +52,6 @@ input::-webkit-inner-spin-button {
     background-color: #302b63;
     border-radius: 5px;
     margin-top: -490px;
-    z-index: 0;    
 }
 
 #monto-texto {
